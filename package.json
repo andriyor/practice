@@ -29,6 +29,7 @@
   "dependencies": {
     "@shower/material": "^2.2.0",
     "@shower/ribbon": "^3.2.1",
+    "prismjs": "^1.15.0",
     "shower-core": "^2.1.0"
   },
   "devDependencies": {
