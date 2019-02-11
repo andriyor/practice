@@ -29,6 +29,14 @@ gulp.task('prepare', () => {
         .pipe(replace(
             /(<script src=")(node_modules\/shower-core\/)(shower.min.js"><\/script>)/g,
             '$1shower/$3', { skipBinary: true }
+        ))
+        .pipe(replace(
+            /(<link rel="stylesheet" href=")(node_modules\/prismjs\/)([^\/]*)\/(.*\.css">)/g,
+            '$1prismjs/$3/$4', { skipBinary: true }
+        ))
+        .pipe(replace(
+            /(<script src=")(node_modules\/prismjs\/)(prism.js"><\/script>)/g,
+            '$1prismjs/$3', { skipBinary: true }
         ));
 
     const core = gulp.src([
@@ -47,7 +55,17 @@ gulp.task('prepare', () => {
         })
         .pipe(rename( (path) => {
             path.dirname = 'shower/themes/material/' + path.dirname;
-        }))
+        }));
+
+    const prismjs = gulp.src([
+        '**', '!package.json'
+    ], {
+        cwd: 'node_modules/prismjs'
+    })
+        .pipe(rename( (path) => {
+            path.dirname = 'prismjs/' + path.dirname;
+        }));
+
 
     const ribbon = gulp.src([
             '**', '!package.json'
@@ -64,7 +82,7 @@ gulp.task('prepare', () => {
             '$1../../$3', { skipBinary: true }
         ));
 
-    return merge(shower, core, themes)
+    return merge(shower, core, themes, prismjs)
         .pipe(gulp.dest('prepared'));
 
 });
