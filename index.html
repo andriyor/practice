@@ -10,6 +10,9 @@
         .shower {
             --slide-ratio: calc(16 / 9);
         }
+        .off::after {
+            visibility: hidden;
+        }
     </style>
 </head>
 <body class="shower list">
@@ -47,14 +50,10 @@
                 text-align: center;
                 font-size: 20px;
             }
-
-            .off::after {
-                visibility: hidden;
-            }
         </style>
     </section>
 
-    <section class="slide">
+    <section class="slide off">
         <h2>Зміст</h2>
         <ol>
             <li>Технології які були використані</li>
@@ -162,15 +161,10 @@
     </section>
 
 
-    <section class="slide black active" id="off">
+    <section class="slide black active off">
         <video class="cover height" autoplay loop>
             <source src="pictures/virtual-scroll.mp4" type="video/webm">
         </video>
-        <style>
-            #off::after {
-                visibility: hidden;
-            }
-        </style>
     </section>
 
 
@@ -284,6 +278,125 @@
     </section>
 
     <section class="slide">
+        <h2>Конфігорування колонок</h2>
+        <pre  style="font-size: 16px">
+            <code class="language-js">const colDefStudentSurname = {
+    headerName: 'Прізвище',
+    field: 'student.surname',
+    checkboxSelection: true,
+    minWidth: 150
+};</code>
+        </pre>
+    </section>
+
+    <!--<section class="slide">-->
+        <!--<h2>Конфігорування колонок</h2>-->
+        <!--<pre  style="font-size: 16px">-->
+            <!--<code class="language-html">-->
+            <!--</code>-->
+        <!--</pre>-->
+    <!--</section>-->
+
+    <section class="slide">
+        <h2>Компонент</h2>
+        <pre  style="font-size: 11px">
+            <code class="lang-html">&lt;ag-grid-angular&gt;
+      class="ag-theme-balham students-table"
+      rowSelection="multiple"
+      enableCellChangeFlash=true
+      [animateRows]="true"
+      [rowData]="students"
+      [columnDefs]="columnDefs"
+      [defaultColDef]="defaultColDef"
+      [accentedSort]="true"
+      [localeText]="localeText"
+      [getRowNodeId]="getRowNodeId"
+      [frameworkComponents]="frameworkComponents"
+      (selectionChanged)="onSelectionChanged($event)"
+      (modelUpdated)="onModelUpdated($event)"
+      (gridReady)="onGridReady($event)"
+&lt;/ag-grid-angular&gt;</code>
+        </pre>
+    </section>
+
+    <section class="slide">
+        <h2>Оновлення без перезавантаження</h2>
+        <pre  style="font-size: 12px">
+            <code class="language-js">buildForm() {
+    this.form = this.fb.group({
+      photoUrl: this.model.photoUrl,
+      name: [this.model.name, Validators.required],
+      patronimic: [this.model.patronimic, Validators.required],
+      nameEng: this.model.nameEng,
+      ...
+      motherPhone: this.model.motherPhone,
+      notes: this.model.notes,
+      email: this.model.email,
+    });
+  }</code>
+        </pre>
+    </section>
+
+    <section class="slide">
+        <h2>Оновлення без перезавантаження</h2>
+        <pre  style="font-size: 16px">
+            <code class="language-js">this.studentService.updateStudent(Object.assign(this.form.value, { id }))
+      .subscribe(() => {
+        this.onSubmit.emit(this.form.value);
+        this.modal.hide();
+      })</code>
+        </pre>
+    </section>
+
+    <section class="slide">
+        <h2>Оновлення без перезавантаження</h2>
+        <pre  style="font-size: 16px">
+            <code class="language-js">updateStudentPersonalInfo(studentPersonalInfo) {
+    const selectedStudent = this.students.find(student =>
+                    student.id === this.selected[0].id);
+    for (const col of this.columnDefsAll) {
+      if (col.field.startsWith('student.')) {
+        const [, field] = col.field.split('.');
+        selectedStudent['student'][field] = studentPersonalInfo[field];
+      }
+    }
+    this.gridApi.refreshCells();
+  }</code>
+        </pre>
+    </section>
+
+    <section class="slide">
+        <h2>Додавання колонок</h2>
+        <pre  style="font-size: 9px">
+            <code class="language-js">setColumns(columns: string[]) {
+    this.oldSelectedIds = this.selected.map(a => (a.id));
+    if (!this.isAllDataLoaded) {
+      this.studentService.getStudents()
+        .subscribe((students: StudentDegree[]) => {
+          this.students = students;
+          this.isAllDataLoaded = true;
+        });
+    }
+    const cols = [];
+    for (const column of columns) {
+      for (const columnDef of this.columnDefsAll) {
+        if (column === columnDef.field) {
+          cols.push(columnDef)
+        }
+      }
+    }
+    this.gridApi.setColumnDefs(cols);
+  }
+</code>
+        </pre>
+    </section>
+
+    <section class="slide">
+        <h2>Пришвидшення роботи з таблицями...</h2>
+        <img src="pictures/loc.png" class="place center" style="width: 200px;" alt="" width="100%">
+    </section>
+
+    <section class="slide">
         <h2>Редагування вже з завантаженими данними - в 3.5 швидше</h2>
         <div class="columns two">
             <p>
@@ -319,22 +432,8 @@
         </div>
     </section>
 
-    <section class="slide">
-        <h2>Code samples</h2>
-        <pre  style="font-size: 16px">
-            <code class="language-js">updateStudentPersonalInfo(studentPersonalInfo) {
-    const selectedStudent = this.students.find(student =>
-                    student.id === this.selected[0].id);
-    for (const col of this.columnDefsAll) {
-      if (col.field.startsWith('student.')) {
-        const [, field] = col.field.split('.');
-        selectedStudent['student'][field] = studentPersonalInfo[field];
-      }
-    }
-    this.gridApi.refreshCells();
-  }
-            </code>
-        </pre>
+    <section class="slide off">
+        <h2 class="shout shrink">Дякую за увагу!</h2>
     </section>
 
     <div class="progress"></div>
