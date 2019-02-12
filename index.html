@@ -10,8 +10,14 @@
         .shower {
             --slide-ratio: calc(16 / 9);
         }
+        .slide {
+            text-align: justify;
+        }
         .off::after {
             visibility: hidden;
+        }
+        p {
+            text-indent: 20px;
         }
     </style>
 </head>
@@ -25,8 +31,8 @@
         <p>Міністерство освіти і науки України Черкаський державний технологічний університет</p>
         <p>Кафедра комп’ютерних наук та системного аналізу</p>
         <h2>Звіт з переддипломної практики</h2>
-        <p id="footer">Черкаси 2018</p>
-        <p id="who" class="place bottom right" style="width: 250px; margin: 300px 30px 30px; font-size: 18px; text-align: left">
+        <p id="footer">Черкаси 2019</p>
+        <p id="who" class="place bottom right" style="width: 250px; margin: 300px 30px 30px; font-size: 18px; text-align: left; text-indent: 0">
             Підготував: студент 4-го курсу  <br>
             групи КТ - 151  <br>
             Орєхов А.В.
@@ -49,6 +55,7 @@
                 margin: 150px 0 0;
                 text-align: center;
                 font-size: 20px;
+                text-indent: 0;
             }
         </style>
     </section>
@@ -134,7 +141,7 @@
 
     <section class="slide">
         <h2>Angular</h2>
-        <p style="margin-right: 250px; font-size: 23px">Angular 2 - фреймворк з відкритим вихідним кодом, написаний на JavaScript
+        <p style="margin-right: 250px; font-size: 23px">Angular - фреймворк з відкритим вихідним кодом, написаний на JavaScript
             і підтримуваний компанією Google. Він являє собою повністю переписану версію свого популярного попередника, AngularJS.
             За допомогою Angular можна розробляти програми на JavaScript (застосовуючи синтаксис ECMAScript 5 або 6), Dart або TypeScript.</p>
         <img src="pictures/angular.svg" class="place bottom right" style="width: 300px; margin: 300px 10px 20px" alt="" width="100%">
@@ -183,26 +190,26 @@
     <section class="slide">
         <h2>Завдання від бази практики</h2>
         <ol>
-            <li>Ознайомитися та набути практичних навичок в створенні реюзабельних компонентів</li>
-            <li>Ознайомитися з юніт тестами для Angular компонентів</li>
-            <li>Ознайомитися та набути практичних навичок в використанні реактивного програмування (RxJS)</li>
+            <li>Набути практичних навичок в створенні реюзабельних компонентів</li>
+            <li>Набути практичних в написанні юніт тестів для Angular компонентів</li>
+            <li>Набути практичних навичок в використанні реактивного програмування (RxJS)</li>
         </ol>
     </section>
 
     <section class="slide">
         <h2>Завдання від університету</h2>
         <ul>
-            <li>Виправлення та покращення
+            <li>Новий функціонал:
+                <ol>
+                    <li>Пошук по всим відрахованим студентам</li>
+                    <li>Інформація по відрахованому студенту в одному модальному вікні</li>
+                    <li>Історія відрахувань та поновлень студента</li>
+                </ol>
+            </li>
+             <li>Виправлення та покращення:
                 <ol>
                     <li>Пришвидшити роботу з таблицями</li>
                     <li>Збільшити консистентність</li>
-                </ol>
-            </li>
-            <li>Фічі
-                <ol>
-                    <li>Пошук по всим відрахованим студентам</li>
-                    <li>Інформація по відрахованому студенту в одному попапі</li>
-                    <li>Історія відрахувань та поновлень студента</li>
                 </ol>
             </li>
         </ul>
@@ -223,7 +230,7 @@
         <p>Можливості вирішення</p>
         <ul>
             <li>Використати віртуальний скролінг</li>
-            <li>Оновлювати таблицю з форм або від отриманих данних з сервера</li>
+            <li>Оновлювати таблицю данними з форм або від отриманих данних з сервера</li>
         </ul>
     </section>
 
@@ -240,7 +247,7 @@
             <dl>
                 <dt>Написати свій компонент для таблиць + віртуальний скролінг (Angular 7+)</dt>
                 <dd>+ Кастомізація під себе</dd>
-                <dd>- Велосипед</dd>
+                <dd>- Лісопед / костилі / баги</dd>
                 <dd>- Складність в підтримці та розширенні</dd>
                 <dt>Використати наявні компоненти таблиць з вбудованим віртуал скролінгом</dt>
                 <dd>+ Підвищення швидкості розробки</dd>
@@ -257,13 +264,13 @@
     <section class="slide">
         <h2>Вимоги до компоненту табціли</h2>
         <ol>
-            <li>Multi column sorting</li>
-            <li>Custom Sorting / Filtering</li>
-            <li>Column reorder</li>
-            <li>Range Selection</li>
+            <li>Сортування більше одної колонки одночасно</li>
+            <li>Фільтрація</li>
+            <li>Зміна порядку стовпців</li>
+            <li>Вибір рядків в діапазні</li>
             <li>Virtual scroll</li>
-            <li>Theme customization</li>
-            <li>Clipboard</li>
+            <li>Налаштування теми</li>
+            <li>Підтримка буфера обміну</li>
         </ol>
     </section>
 
@@ -290,7 +297,7 @@
             </tr>
             <tr>
                 <th scope="row">performance</th>
-                <td>low</td>
+                <td>poor</td>
                 <td>high</td>
                 <td>high+</td>
             </tr>
@@ -343,18 +350,6 @@
     </section>
 
     <section class="slide">
-        <h2>Конфігорування колонок</h2>
-        <pre  style="font-size: 16px">
-            <code class="language-js">const colDefStudentSurname = {
-    headerName: 'Прізвище',
-    field: 'student.surname',
-    checkboxSelection: true,
-    minWidth: 150
-};</code>
-        </pre>
-    </section>
-
-    <section class="slide">
         <h2>Компонент</h2>
         <pre  style="font-size: 11px">
             <code class="lang-html">&lt;ag-grid-angular&gt;
@@ -373,6 +368,19 @@
       (modelUpdated)="onModelUpdated($event)"
       (gridReady)="onGridReady($event)"
 &lt;/ag-grid-angular&gt;</code>
+        </pre>
+    </section>
+
+
+    <section class="slide">
+        <h2>Конфігорування колонок</h2>
+        <pre  style="font-size: 16px">
+            <code class="language-js">const colDefStudentSurname = {
+    headerName: 'Прізвище',
+    field: 'student.surname',
+    checkboxSelection: true,
+    minWidth: 150
+};</code>
         </pre>
     </section>
 
@@ -470,13 +478,13 @@
     <section class="slide">
         <h2>Редагування вже з завантаженими данними - в 3.5 швидше</h2>
         <div class="columns two">
-            <p>
+            <p style="text-indent: 0">
                 <video autoplay loop style="height: 220px">
                     <source src="pictures/ngx-datatable-in-place-360.mp4" type="video/webm">
                 </video>
                 До
             </p>
-            <p>
+            <p style="text-indent: 0">
                 <video autoplay loop style="height: 220px">
                     <source src="pictures/ag-grid-in-place-360.mp4" type="video/webm">
                 </video>
@@ -488,13 +496,13 @@
     <section class="slide">
         <h2>Відкриття, вібір колонок, редагування - в 3.5 швидше</h2>
         <div class="columns two">
-            <p>
+            <p style="text-indent: 0">
                 <video autoplay loop style="height: 220px">
                     <source src="pictures/ngx-datatable-col-cut-480.mp4" type="video/webm">
                 </video>
                 До
             </p>
-            <p>
+            <p style="text-indent: 0">
                 <video autoplay loop style="height: 220px">
                     <source src="pictures/ag-grid-col-cut-480.mp4" type="video/webm">
                 </video>
@@ -551,7 +559,7 @@ if (!this.editable) {
         </p>
         <ul>
             <li>Перехід до одної бібліотеки компонентів Bootstrap</li>
-            <li>Перехід від шаблонних форм на реактивні форми</li>
+            <li>Перехід з шаблонних форм на реактивні форми</li>
             <li>Вікі сторінка для нових розробників</li>
         </ul>
     </section>
@@ -565,6 +573,23 @@ if (!this.editable) {
             Набув знань в предметній області та зібрав фактичний матеріал, на основі якого буде виконуватися майбутня бакалаврська робота.
             Також набув навичок самостійної професійної роботи в середовищі трудового колективу.
         </p>
+    </section>
+
+    <section class="slide">
+        <h2>Посилання</h2>
+        <ol style="font-size: 19px">
+            <li><a href="https://www.manning.com/books/angular-2-development-with-typescript">Angular 2 Development with TypeScript</a></li>
+            <li><a href="https://github.com/Microsoft/TypeScript-Handbook">TypeScript Handbook</a></li>
+            <li><a href="https://angular.io/guide/rx-library">The RxJS library</a></li>
+            <li><a href="https://angular.io/guide/testing">Testing</a></li>
+            <li><a href="https://www.ag-grid.com/angular-more-details/">ag-Grid Angular Overview</a></li>
+            <li><a href="https://www.primefaces.org/primeng/#/table">PrimeNG TurboTable</a></li>
+            <li><a href="https://valor-software.com/ngx-bootstrap/#/documentation">ngx-bootstrap documentation</a></li>
+            <li><a href="https://netbasal.com/why-its-time-to-say-goodbye-to-angular-template-driven-forms-350c11d004b">Why It’s Time to Say Goodbye to Angular Template-Driven Forms</a></li>
+            <li><a href="https://itnext.io/angular-patterns-2-how-to-write-seriously-reusable-components-96be16568abc">Angular patterns 2: how to write seriously reusable components</a></li>
+            <li><a href="https://medium.com/@spp020/44-quick-tips-to-fine-tune-angular-performance-9f5768f5d945">44 quick tips to fine-tune Angular performance</a></li>
+            <!--<li><a href="https://developers.google.com/web/tools/chrome-devtools/evaluate-performance/">Get Started With Analyzing Runtime Performance</a></li>-->
+        </ol>
     </section>
 
     <section class="slide off">
