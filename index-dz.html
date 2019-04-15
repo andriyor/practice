@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Shower Presentation Engine</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="node_modules/prismjs/themes/prism.css">
+    <link rel="stylesheet" href="node_modules/@shower/ribbon/styles/styles.css">
+    <style>
+        .shower {
+            --slide-ratio: calc(16 / 9);
+        }
+        .slide {
+            text-align: justify;
+        }
+        .off::after {
+            visibility: hidden;
+        }
+        p {
+            text-indent: 20px;
+        }
+    </style>
+</head>
+<body class="shower list">
+
+    <header class="caption">
+        <h1>Shower Presentation Engine</h1>
+    </header>
+
+    <section class="slide off" id="cover">
+        <p>Міністерство освіти і науки України Черкаський державний технологічний університет</p>
+        <p>Кафедра комп’ютерних наук та системного аналізу</p>
+        <h2>Фронтенд модуль роботи з інформацією про студентів інформаційної системи підтримки освітньої діяльності структурних підрозділів закладу вищої освіти</h2>
+        <p id="footer">Черкаси 2019</p>
+        <p id="who" class="place bottom right" style="width: 250px; margin: 300px 30px 30px; font-size: 18px; text-align: left; text-indent: 0">
+            Підготував: студент 4-го курсу  <br>
+            групи КТ - 151  <br>
+            Орєхов А.В.
+        </p>
+
+        <style>
+            #cover h2 {
+                margin: 100px 0 0;
+                text-align: center;
+                font-size: 30px;
+            }
+
+            #cover p {
+                margin: 20px 0 0;
+                text-align: center;
+                font-size: 20px;
+            }
+
+            p#footer {
+                margin: 150px 0 0;
+                text-align: center;
+                font-size: 20px;
+                text-indent: 0;
+            }
+        </style>
+    </section>
+
+<!--    <section class="slide off">-->
+<!--        <h2>Зміст</h2>-->
+<!--        <ul style="font-size: 15px">-->
+<!--            <li>Вступ</li>-->
+<!--            <li>АСУ "Деканат"-->
+<!--                <ul>-->
+<!--                    <li>Ознайомлення</li>-->
+<!--                    <li>Функціональні вимоги</li>-->
+<!--                    <li>Технології які були використані при розробці</li>-->
+<!--                </ul>-->
+<!--            </li>-->
+<!--            <li>Завдання-->
+<!--                <ul>-->
+<!--                    <li>Завдання від бази практики</li>-->
+<!--                    <li>Завдання від університету</li>-->
+<!--                </ul>-->
+<!--            </li>-->
+<!--            <li>Виконання завдань від бази практики та університету</li>-->
+<!--            <li>Висновки</li>-->
+<!--        </ul>-->
+<!--    </section>-->
+
+    <section class="slide">
+        <h2>Скільки триває проект?</h2>
+        <p>Проект триває вже 2 роки</p>
+        <p>Фаза активної розробки 1,5 року</p>
+        <img src="pictures/project-time.jpg" class="place right" style="width: 500px">
+    </section>
+
+    <section class="slide">
+        <h2>Які ролі мають студенти у проекті?</h2>
+        <img src="pictures/rols.png" class="place bottom" style="width: 75%">
+    </section>
+
+    <section class="slide">
+        <h2>Яка мета цього проекту?</h2>
+        <ol style="margin-right: 300px">
+            <li>Надання досвіду студентам у створенні реальної інформаційної системи;</li>
+            <li>Автоматизація роботи деканатів та інших підрозділів ЧДТУ.</li>
+        </ol>
+        <img src="pictures/Set-a-Target.jpg" class="place bottom right" style="width: 350px; margin: 200px 20px 200px" alt="" width="100%">
+    </section>
+
+    <section class="slide">
+        <h2>АСУ "Деканат"</h2>
+        <p style="font-size: 23px">Автоматизована система управління студентським контингентом для вищого навчального закладу
+            призначена для підвищення ефективності функціонування підрозділів ВНЗ та поліпшення якості освітнього процесу,
+            за рахунок зниження часу який витрачається на процеси збору, обробки та отримання будь-якої інформації, яка записується.
+        </p>
+    </section>
+
+    <section class="slide">
+        <h2>Функціональні вимоги</h2>
+        <p style="font-size: 23px">Програма являє собою веб додаток і повинна бути невимогливою до системних ресурсів.
+            Інтерфейс програми має бути мінімалістичним, сучасним та інтуїтивно зрозумілим.
+            Вимоги до технічних та програмних засобів
+        </p>
+        <table style="font-size: 19px">
+            <tr>
+                <th>Браузери</th>
+                <th>Мінімальні версії</th>
+            </tr>
+            <tr>
+                <th>Internet Explorer</th>
+                <td>10+</td>
+            </tr>
+            <tr>
+                <th>Chrome</th>
+                <td>12.0+</td>
+            </tr>
+            <tr>
+                <th>Firefox</th>
+                <td>8.0+</td>
+            </tr>
+        </table>
+    </section>
+
+    <section class="slide">
+        <h2>Участники</h2>
+        <p>За весь час проекту</p>
+        <table style="font-size: 19px">
+            <tr>
+                <th>Спеціальність</th>
+                <th>Кількість студентів</th>
+            </tr>
+            <tr>
+                <th>Інформаційні управляючі системи і технології</th>
+                <td>4</td>
+            </tr>
+            <tr>
+                <th>Інженерія програмного забезпечення</th>
+                <td>14</td>
+            </tr>
+            <tr>
+                <th>Інформаційні технології проектування</th>
+                <td>2</td>
+            </tr>
+            <tr>
+                <th>Спеціалізовані комп’ютерні системи</th>
+                <td>1</td>
+            </tr>
+            <tr>
+                <th>Системний аналіз</th>
+                <td>2</td>
+            </tr>
+            <tr>
+                <th>Разом</th>
+                <td>23</td>
+            </tr>
+        </table>
+        <p>Поточна кількість задіяних студентів - 10</p>
+    </section>
+
+    <section class="slide">
+        <h2>Куратори проекту?</h2>
+        <img src="pictures/spd.jpeg" class="place left" style="width: 250px; margin: 100px 50px 100px" alt="" width="100%">
+        <img src="pictures/moc.png" class="place bottom " style="width: 350px; margin: 200px 20px 200px" alt="" width="100%">
+        <img src="pictures/InterLink_w.png" class="place right" style="width: 350px; margin: 150px 20px 200px" alt="" width="100%">
+    </section>
+
+    <section class="slide">
+        <h2>Master of Code</h2>
+        <p style="font-size: 22px">
+            Master Of Code Global – це велика міжнародна IT-компанія, в якій працює близько 150 фахівців.
+            Була заснована в 2004 році. Компанія є відомою у сфері розробки чат-ботів, а також спеціалізується на розробці веб та мобільних додатків.
+            Нещодавні проекти: інформаційний чат-бот ONA17, інтернет магазин eBags,  додаток для поширення фотографій Рhox та інші.
+        </p>
+        <img src="pictures/moc.png" class="place bottom" style="width: 350px;" alt="" width="100%">
+    </section>
+
+    <section class="slide">
+        <h2>SPD</h2>
+        <p style="font-size: 22px">
+            SPD-Ukraine (Software Product Development Ukraine) – найбільша IT-компанія в Черкасах, в якій працює близько 250 спеціалістів.
+            Була заснована в 2006 році. Спеціалізується на Java проектах. Фірма має ряд дуже великих проектів, серед яких можна назвати, наприклад, PitchBook.
+        </p>
+        <img src="pictures/spdL.png" class="place bottom" style="width: 550px; margin: 20px" alt="">
+    </section>
+
+    <section class="slide">
+        <h2>Interlink</h2>
+        <p style="font-size: 22px">
+            Interlink – провідна черкаська IT-компанія, в якій працює близько 100 розробників. Була заснована в 2000 році.
+            Компанія працює з великим набором технологій: Java, JavaScript, Node.js, Ruby on Rails, Python, Go, C# и Objective C та інші.
+            Найвідоміші проекти: Cargo Bridge (250к завантажень з Apple Store), туристичний сервіс SPO, соціальна мережа Strbrd та інші.
+        </p>
+        <img src="pictures/interlinkL.png" class="place bottom" style="width: 450px; margin: 20px" alt="">
+    </section>
+
+    <section class="slide">
+        <h2>Статистика розробки</h2>
+        <ul>
+            <li>було створено 2919 комітів</li>
+            <li>реалізовано 119  issue на front-end’і та  136 issue на back-end’і</li>
+            <li>створено близько 360 класів та інших артефактів на back-end’і та приблизно 460 на front-end’і</li>
+            <li>близько 12-ти студентів, що брали участь в проекті, зараз працюють в IT-фірмах.</li>
+        </ul>
+    </section>
+
+    <section class="slide off">
+        <img class="cover" src="pictures/tech.png">
+    </section>
+
+    <section class="slide off">
+        <img class="cover" src="pictures/tech2.png">
+    </section>
+
+    <section class="slide">
+        <h2>Робота в команді та SCRUM</h2>
+        <img src="pictures/scrum.jpg" class="place bottom" style="width: 60%; margin: 20px" alt="">
+    </section>
+
+    <section class="slide">
+        <h2>Angular</h2>
+        <p style="margin-right: 250px; font-size: 23px">Angular - фреймворк з відкритим вихідним кодом, написаний на TypeScript
+            і підтримуваний компанією Google. Він являє собою повністю переписану версію свого популярного попередника, AngularJS.
+            За допомогою Angular можна розробляти програми на JavaScript (застосовуючи синтаксис ECMAScript 5 або 6), Dart або TypeScript.</p>
+        <img src="pictures/angular.svg" class="place bottom right" style="width: 300px; margin: 300px 10px 20px" alt="" width="100%">
+    </section>
+
+    <section class="slide">
+        <h2>TypeScript</h2>
+        <p style="margin-right: 250px; font-size: 16px">TypeScript є надбезліччю JavaScript, універсальна мова,
+            створеним в кінці 2012 року співробітником Microsoft Андерсом Хейслбергом - автором C #.</p>
+        <h5>Основні переваги TypeScript</h5>
+            <ol style="font-size: 14px">
+                <li>Компілюється в нормальний JS</li>
+                <li>Підтримка класів, інтерфейсів і нормального ООП</li>
+                <li>Сувора типізація, IDE буде давати підказки та підсвічувати помилки,
+                    якщо ви, наприклад, передали в якості аргументу рядок замість числа</li>
+                <li>Відсутність CallBack Hell і сотні})})})})})} завдяки Async / Await;</li>
+                <li>Наявність всіх нових можливостей в JS, про які ви чули, але поки
+                    не можете використовувати через слабку підтримки браузерами</li>
+            </ol>
+            <img src="pictures/typescript-logo.png" class="place bottom right" style="width: 150px; margin: 300px 20px 250px" alt="" width="100%">
+            <img src="pictures/ts-js.webp" class="place bottom right" style="width: 100px; margin: 300px 20px 20px" alt="" width="100%">
+    </section>
+
+    <section class="slide">
+        <h2>Boostrap</h2>
+        <p style="margin-right: 250px; font-size: 23px">Bootstrap - бібліотека компонентів для створення
+            інтерфейсу користувача з відкритим вихідним кодом, розроблена компанією Twitter. Вони
+            будуються відповідно до принципів адаптивного веб-дизайну, що значно підвищує
+            цінність бібліотеки, якщо ваш веб-додаток повинен автоматично подстроювати свій макет в залежності від розміру екрану пристрою користувача.</p>
+        <img src="pictures/Boostrap_logo.svg" class="place bottom right" style="width: 200px; margin: 300px 20px 250px" alt="" width="100%">
+        <img src="pictures/content-logo.svg" class="place bottom right" style="width: 200px; margin: 300px 20px 20px" alt="" width="100%">
+    </section>
+
+    <section class="slide">
+        <h2>RxJS</h2>
+        <p style="margin-right: 250px; font-size: 21px">Набір бібліотек, необхідних для створення асинхронних програм
+            і програм, заснованих на подіях, з використанням спостережуваних колекцій.
+            Дозволяє програмам працювати з асинхронними потоками даних на зразок
+            серверного потоку котирувань акцій або подій, пов'язаних з рухом миші.
+            За допомогою RxJS потоки даних представляються у вигляді спостережуваних послідовностей.
+            Цю бібліотеку можна застосовувати як з іншими фреймворками
+            JavaScript, так і без них.</p>
+        <img src="pictures/1400x964_RxJS_logo.png" class="place bottom right" style="width: 400px; margin: 300px 20px 100px" alt="" width="100%">
+    </section>
+
+    <section class="slide">
+        <h2>Завдання від кураторів проекту</h2>
+        <ol>
+            <li>Набути практичних навичок в створенні реюзабельних компонентів</li>
+            <li>Набути практичних в написанні юніт тестів для Angular компонентів</li>
+            <li>Набути практичних навичок в використанні реактивного програмування (RxJS)</li>
+        </ol>
+    </section>
+
+    <section class="slide">
+        <h2>Особисті завдання</h2>
+        <ul>
+            <li>Новий функціонал:
+                <ol>
+                    <li>Пошук по всим відрахованим студентам</li>
+                    <li>Інформація по відрахованому студенту в одному модальному вікні</li>
+                    <li>Історія відрахувань та поновлень студента</li>
+                </ol>
+            </li>
+             <li>Виправлення та покращення:
+                <ol>
+                    <li>Пришвидшити роботу з таблицями</li>
+                    <li>Збільшити консистентність</li>
+                </ol>
+            </li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <h2>Пришвидшення роботи з таблицями</h2>
+        <p>Проблема</p>
+        <ul>
+            <li>Рендеринг таблиці з 800 студентів займає 10 секунд</li>
+            <li>Після оновлення інформації про студента чи студентів всі данні повторно перезавантажуються
+                та відбувається повторний рендеринг таблиці</li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <h2>Пришвидшення роботи з таблицями</h2>
+        <p>Можливості вирішення</p>
+        <ul>
+            <li>Використати віртуальний скролінг</li>
+            <li>Оновлювати таблицю данними з форм або від отриманих данних з сервера</li>
+        </ul>
+    </section>
+
+    <section class="slide black off">
+        <video class="cover height" autoplay loop>
+            <source src="pictures/virtual-scroll.mp4" type="video/webm">
+        </video>
+    </section>
+
+    <section class="slide">
+        <h2>Пришвидшення роботи з таблицями</h2>
+        <div style="font-size: 16px">
+            <p>Варіанти додавання віртуального скролінгу</p>
+            <dl>
+                <dt>Написати свій компонент для таблиць + віртуальний скролінг (Angular 7+)</dt>
+                <dd>+ Кастомізація під себе</dd>
+                <dd>- Лісопед / костилі / баги</dd>
+                <dd>- Складність в підтримці та розширенні</dd>
+                <dt>Використати наявні компоненти таблиць з вбудованим віртуал скролінгом</dt>
+                <dd>+ Підвищення швидкості розробки</dd>
+                <dd>+ Підтримка від сторонніх розробників</dd>
+                <dd>+ Зниження кривої входу в проект</dd>
+                <dd>- Відсутність потрібного функціоналу?</dd>
+                <dd>- Непередбачуваність?</dd>
+                <dd>- Платність?</dd>
+            </dl>
+            <img src="pictures/kostil.jpg" class="place bottom right" style="width: 300px; margin: 300px 20px 100px" alt="" width="100%">
+        </div>
+    </section>
+
+    <section class="slide">
+        <h2>Вимоги до компоненту табціли</h2>
+        <ol>
+            <li>Сортування більше одної колонки одночасно</li>
+            <li>Фільтрація</li>
+            <li>Зміна порядку стовпців</li>
+            <li>Вибір рядків в діапазні</li>
+            <li>Virtual scroll</li>
+            <li>Налаштування теми</li>
+            <li>Підтримка буфера обміну</li>
+        </ol>
+    </section>
+
+    <section class="slide">
+        <h2>Порівняння компонетів для таблиць</h2>
+        <table style="font-size: 19px">
+            <tr>
+                <th scope="col">Назва</th>
+                <th>ngx-datatable</th>
+                <th>ag-grid</th>
+                <th>TurboTable (PrimeNG)</th>
+            </tr>
+            <tr>
+                <th scope="row">nested</th>
+                <td>-</td>
+                <td>+</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <th scope="row">virtual scroll</th>
+                <td>+-</td>
+                <td>+</td>
+                <td>+</td>
+            </tr>
+            <tr>
+                <th scope="row">performance</th>
+                <td>poor</td>
+                <td>high</td>
+                <td>high+</td>
+            </tr>
+            <tr>
+                <th scope="row">how work</th>
+                <td>component</td>
+                <td>component</td>
+                <td>wrap native table</td>
+            </tr>
+            <tr>
+                <th scope="row">pro version</th>
+                <td>-</td>
+                <td>+</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <th scope="row">integration</th>
+                <td>medium</td>
+                <td>easy</td>
+                <td>complex</td>
+            </tr>
+            <tr>
+                <th scope="row">custom filter</th>
+                <td>-</td>
+                <td>+</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <th scope="row">last commit</th>
+                <td>2017</td>
+                <td>2019</td>
+                <td>2019</td>
+            </tr>
+            <tr>
+                <th scope="row">open issues</th>
+                <td>600</td>
+                <td>20</td>
+                <td>120</td>
+            </tr>
+        </table>
+    </section>
+
+    <section class="slide" id="off">
+        <img class="cover" src="pictures/mem-table.jpg">
+        <style>
+            #off::after {
+                visibility: hidden;
+            }
+        </style>
+    </section>
+
+    <section class="slide">
+        <h2>Компонент</h2>
+        <pre  style="font-size: 11px">
+            <code class="lang-html">&lt;ag-grid-angular&gt;
+      class="ag-theme-balham students-table"
+      rowSelection="multiple"
+      enableCellChangeFlash=true
+      [animateRows]="true"
+      [rowData]="students"
+      [columnDefs]="columnDefs"
+      [defaultColDef]="defaultColDef"
+      [accentedSort]="true"
+      [localeText]="localeText"
+      [getRowNodeId]="getRowNodeId"
+      [frameworkComponents]="frameworkComponents"
+      (selectionChanged)="onSelectionChanged($event)"
+      (modelUpdated)="onModelUpdated($event)"
+      (gridReady)="onGridReady($event)"
+&lt;/ag-grid-angular&gt;</code>
+        </pre>
+    </section>
+
+
+    <section class="slide">
+        <h2>Конфігорування колонок</h2>
+        <pre  style="font-size: 16px">
+            <code class="language-js">const colDefStudentSurname = {
+    headerName: 'Прізвище',
+    field: 'student.surname',
+    checkboxSelection: true,
+    minWidth: 150
+};</code>
+        </pre>
+    </section>
+
+    <section class="slide">
+        <h2>Оновлення без перезавантаження</h2>
+        <pre  style="font-size: 12px">
+            <code class="language-js">buildForm() {
+    this.form = this.fb.group({
+      photoUrl: this.model.photoUrl,
+      name: [this.model.name, Validators.required],
+      patronimic: [this.model.patronimic, Validators.required],
+      nameEng: this.model.nameEng,
+      ...
+      motherPhone: this.model.motherPhone,
+      notes: this.model.notes,
+      email: this.model.email,
+    });
+  }</code>
+        </pre>
+    </section>
+
+    <section class="slide">
+        <h2>Оновлення без перезавантаження</h2>
+        <pre  style="font-size: 16px">
+            <code class="language-js">this.studentService.updateStudent(Object.assign(this.form.value, { id }))
+      .subscribe(() => {
+        this.onSubmit.emit(this.form.value);
+        this.modal.hide();
+      })</code>
+        </pre>
+    </section>
+
+    <section class="slide">
+        <h2>Оновлення без перезавантаження</h2>
+        <pre  style="font-size: 16px">
+            <code class="language-js">updateStudentPersonalInfo(studentPersonalInfo) {
+    const selectedStudent = this.students.find(student =>
+                    student.id === this.selected[0].id);
+    for (const col of this.columnDefsAll) {
+      if (col.field.startsWith('student.')) {
+        const [, field] = col.field.split('.');
+        selectedStudent['student'][field] = studentPersonalInfo[field];
+      }
+    }
+    this.gridApi.refreshCells();
+  }</code>
+        </pre>
+    </section>
+
+    <section class="slide">
+        <h2>Додавання колонок</h2>
+        <pre  style="font-size: 9px">
+            <code class="language-js">setColumns(columns: string[]) {
+    this.oldSelectedIds = this.selected.map(a => (a.id));
+    if (!this.isAllDataLoaded) {
+      this.studentService.getStudents()
+        .subscribe((students: StudentDegree[]) => {
+          this.students = students;
+          this.isAllDataLoaded = true;
+        });
+    }
+    const cols = [];
+    for (const column of columns) {
+      for (const columnDef of this.columnDefsAll) {
+        if (column === columnDef.field) {
+          cols.push(columnDef)
+        }
+      }
+    }
+    this.gridApi.setColumnDefs(cols);
+  }
+</code>
+        </pre>
+    </section>
+
+    <section class="slide">
+        <h2>Пришвидшення роботи з таблицями...</h2>
+        <img src="pictures/loc.png" class="place center" style="width: 200px;" alt="" width="100%">
+    </section>
+
+    <section class="slide">
+        <h2>Фільтрація</h2>
+        <div class="columns two">
+            <div>
+                <img src="pictures/filter.png" alt="">
+                <p>Вбудований фільтр</p>
+            </div>
+            <div>
+                <img src="pictures/custom-filter.png" alt="">
+                <p>Кастомний фільтр</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="slide">
+        <h2>Редагування вже з завантаженими данними - в 3.5 швидше</h2>
+        <div class="columns two">
+            <p style="text-indent: 0">
+                <video autoplay loop style="height: 220px">
+                    <source src="pictures/ngx-datatable-in-place-360.mp4" type="video/webm">
+                </video>
+                До
+            </p>
+            <p style="text-indent: 0">
+                <video autoplay loop style="height: 220px">
+                    <source src="pictures/ag-grid-in-place-360.mp4" type="video/webm">
+                </video>
+                Після
+            </p>
+        </div>
+    </section>
+
+    <section class="slide">
+        <h2>Відкриття, вібір колонок, редагування - в 3.5 швидше</h2>
+        <div class="columns two">
+            <p style="text-indent: 0">
+                <video autoplay loop style="height: 220px">
+                    <source src="pictures/ngx-datatable-col-cut-480.mp4" type="video/webm">
+                </video>
+                До
+            </p>
+            <p style="text-indent: 0">
+                <video autoplay loop style="height: 220px">
+                    <source src="pictures/ag-grid-col-cut-480.mp4" type="video/webm">
+                </video>
+                Після
+            </p>
+        </div>
+    </section>
+
+    <section class="slide">
+        <h2>Пошук по всим відрахованим студентам</h2>
+        <img src="pictures/search-all-expell.png" class="place center" style="width: 700px;" alt="" width="100%">
+    </section>
+
+    <section class="slide">
+        <h2>Інформація про відрахованого студента</h2>
+        <img src="pictures/expell-info.png" class="place center" style="width: 700px;" alt="" width="100%">
+    </section>
+
+    <section class="slide">
+        <h2>Перевикористання компоненту</h2>
+        <pre  style="font-size: 11px">
+            <code class="lang-html">&lt;modal-wrapper #modal [title]="'Інформація про студента'"&gt;
+    &lt;tabset&gt;
+        &lt;tab heading="Особиста інформація"&gt;
+          &lt;app-student-personal-info
+              [editable]="editable"
+              #studentPersonalInfo>
+          &lt;/app-student-personal-info&gt;
+        &lt;/tab&gt;
+    &lt;/tabset&gt;
+&lt;/modal-wrapper&gt;</code>
+            <code class="lang-js">
+if (!this.editable) {
+  this.form.disable();
+}
+            </code>
+        </pre>
+    </section>
+
+    <section class="slide">
+        <h2>Збільшення консистентності</h2>
+        <p style="font-size: 23px">
+            Наявні проблеми
+        </p>
+        <p>Кожен новий розробник на проекті вносить щось своє, що може відрізняти від застосованого підходу іншиими.
+            Що в свою чергу ускладнює освоєння проекту новими розробниками
+        </p>
+    </section>
+
+    <section class="slide">
+        <h2>Збільшення консистентності</h2>
+        <p style="font-size: 23px">
+            Було виділено основні збіжності між компонентами та прийняті такі міри:
+        </p>
+        <ul>
+            <li>Перехід до одної бібліотеки компонентів Bootstrap</li>
+            <li>Перехід з шаблонних форм на реактивні форми</li>
+            <li>Вікі сторінка для нових розробників</li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <h2>Посилання</h2>
+        <ol style="font-size: 19px">
+            <li><a href="https://www.manning.com/books/angular-2-development-with-typescript">Angular 2 Development with TypeScript</a></li>
+            <li><a href="https://github.com/Microsoft/TypeScript-Handbook">TypeScript Handbook</a></li>
+            <li><a href="https://angular.io/guide/rx-library">The RxJS library</a></li>
+            <li><a href="https://angular.io/guide/testing">Testing</a></li>
+            <li><a href="https://www.ag-grid.com/angular-more-details/">ag-Grid Angular Overview</a></li>
+            <li><a href="https://www.primefaces.org/primeng/#/table">PrimeNG TurboTable</a></li>
+            <li><a href="https://valor-software.com/ngx-bootstrap/#/documentation">ngx-bootstrap documentation</a></li>
+            <li><a href="https://netbasal.com/why-its-time-to-say-goodbye-to-angular-template-driven-forms-350c11d004b">Why It’s Time to Say Goodbye to Angular Template-Driven Forms</a></li>
+            <li><a href="https://itnext.io/angular-patterns-2-how-to-write-seriously-reusable-components-96be16568abc">Angular patterns 2: how to write seriously reusable components</a></li>
+            <li><a href="https://medium.com/@spp020/44-quick-tips-to-fine-tune-angular-performance-9f5768f5d945">44 quick tips to fine-tune Angular performance</a></li>
+            <!--<li><a href="https://developers.google.com/web/tools/chrome-devtools/evaluate-performance/">Get Started With Analyzing Runtime Performance</a></li>-->
+        </ol>
+    </section>
+
+    <section class="slide off">
+        <h2 class="shout shrink">Дякую за увагу!</h2>
+    </section>
+
+    <div class="progress"></div>
+
+    <script src="node_modules/shower-core/shower.min.js"></script>
+    <script src="node_modules/prismjs/prism.js"></script>
+
+</body>
+</html>
