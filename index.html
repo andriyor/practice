@@ -11,13 +11,28 @@
     <p>Кафедра комп’ютерних наук та системного аналізу</p>
     <h2>Фронтенд модуль роботи з інформацією про студентів інформаційної системи підтримки освітньої діяльності структурних підрозділів закладу вищої освіти</h2>
     <p id="footer">Черкаси 2019</p>
-    <p id="who" class="place bottom right" style="width: 250px; margin: 300px 30px 30px; font-size: 18px; text-align: left; text-indent: 0">
-        Підготував: студент 4-го курсу  <br>
-        групи КТ - 151  <br>
-        Орєхов А.В.
-    </p>
+    <div id="who"  class="place bottom grid-container" style="left: 500px; bottom: 50px; font-size: 19px">
+        <div class="grid-element" style="width: max-content;">Захист бакалаврської роботи:</div>
+        <div class="" style="width: max-content;">студент гр. КТ-151 Орєхов А. В.</div>
+        <div class="grid-element" style="width: max-content;">Керівник:</div>
+        <div class="" style="width: max-content;">К.т.н., доцент Саух В.М.</div>
+        <div class="grid-element" style="width: max-content;">Рецензент:</div>
+        <div class="" style="width: max-content;">Head of Learning Dept. at SPD-Ukraine Новитський О. В.</div>
+    </div>
 
     <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-template-areas: ". ." ". ." ". .";
+        }
+
+        .grid-element {
+            white-space: pre-wrap;
+            margin-right: 100px;
+        }
+
         #cover h2 {
             margin: 100px 0 0;
             text-align: center;
@@ -269,7 +284,7 @@
 </section>
 
 <section class="slide">
-    <h2>Куратори проекту?</h2>
+    <h2>Куратори проекту</h2>
     <img src="pictures/spd.jpeg" class="place left" style="width: 250px; margin: 100px 50px 100px" alt="" width="100%">
     <img src="pictures/moc.png" class="place bottom " style="width: 350px; margin: 200px 20px 200px" alt="" width="100%">
     <img src="pictures/InterLink_w.png" class="place right" style="width: 350px; margin: 150px 20px 200px" alt="" width="100%">
